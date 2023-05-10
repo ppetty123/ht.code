@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Image Generator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Random Image Generator</h1>
+	<p>Click the button to generate a random image:</p>
+	<button onclick="generateImage()">Generate</button>
+	<img id="result" src="" alt="Generated Image" width="300" height="300">
+
+	<script>
+		function generateImage() {
+			var images = [
+				"image1.jpg",
+				"image2.jpg",
+				"image3.jpg",
+				"image4.jpg",
+				"image5.jpg"
+			];
+			var randomIndex = Math.floor(Math.random() * images.length);
+			var imageUrl = "images/" + images[randomIndex];
+			document.getElementById("result").src = imageUrl;
+		}
+	</script>
+</body>
+</html>
